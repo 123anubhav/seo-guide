@@ -1,0 +1,126 @@
+
+    :root {
+      --bg: #f9fafb;
+      --text: #111827;
+      --card-bg: #ffffff;
+      --accent: #4f46e5;
+      --border: #e5e7eb;
+      --shadow: rgba(0, 0, 0, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827;
+        --text: #f9fafb;
+        --card-bg: #1f2937;
+        --border: #374151;
+        --shadow: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, var(--accent), #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    pre {
+      background: var(--border);
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+    }
+
+    .copy-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 16px;
+      transition: opacity 0.2s;
+    }
+
+    .copy-btn:hover {
+      opacity: 0.9;
+    }
+
+    .copy-btn:active {
+      transform: scale(0.98);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .card {
+        padding: 18px;
+      }
+    }
